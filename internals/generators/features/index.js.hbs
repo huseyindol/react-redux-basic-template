@@ -9,12 +9,18 @@ import React, { memo } from 'react';
 {{else}}
 import React from 'react';
 {{/if}}
+{{#if wantCreateSlice}}
+import { useSelector, useDispatch } from "react-redux";
+import { select{{properCase name}} } from "./slice";
+{{/if}}
 {{#if wantStyle}}
 import { {{properCase name}}Tag } from './styles';
 {{/if}}
 // import PropTypes from 'prop-types';
 
 function {{ properCase name }}() {
+const {{name}}State = useSelector(select{{properCase name}});
+const dispatch = useDispatch();
 return (
 <{{properCase name}}Tag>
   {{ properCase name }}

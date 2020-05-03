@@ -5,11 +5,15 @@
  */
 
 import React, { memo } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { selectProduct } from "./slice";
 import { ProductTag } from "./styles";
 // import PropTypes from 'prop-types';
 
 function Product() {
-  return <ProductTag>Product askjdbasd</ProductTag>;
+  const ProductState = useSelector(selectProduct);
+  const dispatch = useDispatch();
+  return <ProductTag>Product</ProductTag>;
 }
 
 Product.propTypes = {};

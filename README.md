@@ -1,14 +1,12 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 
-### `React Redux Styled-Components | Hooks`
+## `React Redux Styled-Components | Hooks`
 
 **Redux -> createSlice, useSelector, useDispatch**
 
 "react": "^16.13.1",<br />
 "react-redux": "^7.1.3",<br />
 "styled-components": "^5.1.0"
-
-#
 
 ## Available Scripts
 
