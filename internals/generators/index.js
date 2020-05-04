@@ -8,6 +8,7 @@ const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
 const featuresGenerator = require("./features/index.js");
+const pagesGenerator = require("./pages/index.js");
 
 /**
  * Every generated backup file gets this extension
@@ -17,6 +18,7 @@ const BACKUPFILE_EXTENSION = "rbgen";
 
 module.exports = (plop) => {
   plop.setGenerator("features", featuresGenerator);
+  plop.setGenerator("pages", pagesGenerator);
   plop.addHelper("directory", (comp) => {
     try {
       fs.accessSync(

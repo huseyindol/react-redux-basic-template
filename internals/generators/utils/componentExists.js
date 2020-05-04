@@ -6,10 +6,11 @@
 
 const fs = require("fs");
 const path = require("path");
-const pageComponents = fs.readdirSync(
+const pageFeatures = fs.readdirSync(
   path.join(__dirname, "../../../src/features")
 );
-const components = pageComponents;
+const pagePages = fs.readdirSync(path.join(__dirname, "../../../src/pages"));
+const components = pageFeatures.concat(pagePages);
 
 function componentExists(comp) {
   return components.indexOf(comp) >= 0;

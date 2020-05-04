@@ -9,12 +9,13 @@ import React, { memo } from 'react';
 {{else}}
 import React from 'react';
 {{/if}}
+import { Helmet } from 'react-helmet';
 {{#if wantCreateSlice}}
 import { useSelector, useDispatch } from "react-redux";
 import { select{{properCase name}} } from "./slice";
 {{/if}}
 {{#if wantStyle}}
-import { {{properCase name}}Tag } from './styles';
+import { {{properCase name}}Tag, {{properCase name}}Container } from './styles';
 {{/if}}
 // import PropTypes from 'prop-types';
 
@@ -23,7 +24,13 @@ const {{name}}State = useSelector(select{{properCase name}});
 const dispatch = useDispatch();
 return (
 <{{properCase name}}Tag>
-  {{ properCase name }} Features
+  <Helmet>
+    <title>{{ properCase name }} Page</title>
+    <meta name="description" content="Description of {{ properCase name }} Page" />
+  </Helmet>
+  <{{properCase name}}Container>
+    {{ properCase name }} Page
+  </{{properCase name}}Container>
 </{{properCase name}}Tag>
 );
 }

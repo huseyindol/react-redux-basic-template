@@ -15,7 +15,7 @@ module.exports = {
       type: "input",
       name: "name",
       message: "What should it be called?",
-      default: "Button",
+      default: "AboutMe",
       validate: (value) => {
         if (/.+/.test(value)) {
           return componentExists(value)
@@ -50,8 +50,8 @@ module.exports = {
     const actions = [
       {
         type: "add",
-        path: "../../src/features/{{properCase name}}/index.js",
-        templateFile: "./features/index.js.hbs",
+        path: "../../src/pages/{{properCase name}}/index.js",
+        templateFile: "./pages/index.js.hbs",
         abortOnFail: true,
       },
     ];
@@ -60,8 +60,8 @@ module.exports = {
     if (data.wantCreateSlice) {
       actions.push({
         type: "add",
-        path: "../../src/features/{{properCase name}}/slice.js",
-        templateFile: "./features/slice.js.hbs",
+        path: "../../src/pages/{{properCase name}}/slice.js",
+        templateFile: "./pages/slice.js.hbs",
         abortOnFail: true,
       });
     }
@@ -70,15 +70,15 @@ module.exports = {
     if (data.wantStyle) {
       actions.push({
         type: "add",
-        path: "../../src/features/{{properCase name}}/styles.js",
-        templateFile: "./features/styles.js.hbs",
+        path: "../../src/pages/{{properCase name}}/styles.js",
+        templateFile: "./pages/styles.js.hbs",
         abortOnFail: true,
       });
     }
 
     actions.push({
       type: "prettify",
-      path: "/features/",
+      path: "/pages/",
     });
 
     return actions;
