@@ -9,7 +9,7 @@ import React, { memo } from 'react';
 {{else}}
 import React from 'react';
 {{/if}}
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 {{#if wantCreateSlice}}
 import { useSelector, useDispatch } from "react-redux";
 import { select{{properCase name}} } from "./slice";
