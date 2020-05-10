@@ -5,7 +5,7 @@
  */
 
 import React from "react";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import { useSelector, useDispatch } from "react-redux";
 import { selectAboutMe } from "./slice";
 import { AboutMeTag, AboutMeContainer } from "./styles";
