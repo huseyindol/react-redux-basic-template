@@ -5,20 +5,20 @@
  */
 
 import React from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { selectSignUp } from "./slice";
+// import { useSelector, useDispatch } from "react-redux";
+// import { selectSignUp } from "./slice";
 import { SignUpTag } from "./styles";
 // import PropTypes from 'prop-types';
 import { firebaseInit } from "../../../config/firebase";
 
 function SignUp() {
-  const SignUpState = useSelector(selectSignUp);
-  const dispatch = useDispatch();
+  // const SignUpState = useSelector(selectSignUp);
+  // const dispatch = useDispatch();
   const onSubmitHandle = (e) => {
     e.preventDefault();
     let formData = new FormData(e.target);
     formData = Object.fromEntries(formData);
-    console.log("signup submit", formData);
+    // console.log("signup submit", formData);
     firebaseInit
       .auth()
       .createUserWithEmailAndPassword(formData.email, formData.password)

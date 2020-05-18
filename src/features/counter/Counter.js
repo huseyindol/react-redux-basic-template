@@ -6,7 +6,7 @@ import {
   incrementByAmount,
   incrementAsync,
   selectCount,
-} from "./counterSlice";
+} from "./slice";
 import styles from "./counter.module.css";
 
 function Counter() {
@@ -14,7 +14,7 @@ function Counter() {
   const count = countS.value;
   const dispatch = useDispatch();
   const [incrementAmount, setIncrementAmount] = useState("2");
-
+  console.log("Counter", countS);
   return (
     <div>
       <div className={styles.row}>
