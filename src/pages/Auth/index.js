@@ -10,8 +10,8 @@ import { Helmet } from "react-helmet-async";
 // import { selectAuth } from "./slice";
 import { AuthTag, AuthContainer } from "./styles";
 // import PropTypes from 'prop-types';
-import SignIn from "../../features/Auth/SignIn";
-// import SignUp from "../../features/Auth/SignUp";
+import SignIn from "../../components/Auth/SignIn";
+// import SignUp from "../../components/Auth/SignUp";
 
 function Auth() {
   // const AuthState = useSelector(selectAuth);

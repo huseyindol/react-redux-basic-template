@@ -10,8 +10,8 @@ import React from "react";
 import { HomeTag } from "./styles";
 // import PropTypes from 'prop-types';
 
-import Counter from "../../features/Counter/counter";
-import Product from "../../features/Product";
+import Counter from "../../components/Counter";
+import Product from "../../components/Product";
 
 function Home() {
   // const HomeState = useSelector(selectHome);

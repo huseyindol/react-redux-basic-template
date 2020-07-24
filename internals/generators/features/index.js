@@ -50,8 +50,8 @@ module.exports = {
     const actions = [
       {
         type: "add",
-        path: "../../src/features/{{properCase name}}/index.js",
-        templateFile: "./features/index.js.hbs",
+        path: "../../src/components/{{properCase name}}/index.js",
+        templateFile: "./components/index.js.hbs",
         abortOnFail: true,
       },
     ];
@@ -60,8 +60,8 @@ module.exports = {
     if (data.wantCreateSlice) {
       actions.push({
         type: "add",
-        path: "../../src/features/{{properCase name}}/slice.js",
-        templateFile: "./features/slice.js.hbs",
+        path: "../../src/components/{{properCase name}}/slice.js",
+        templateFile: "./components/slice.js.hbs",
         abortOnFail: true,
       });
     }
@@ -70,15 +70,15 @@ module.exports = {
     if (data.wantStyle) {
       actions.push({
         type: "add",
-        path: "../../src/features/{{properCase name}}/styles.js",
-        templateFile: "./features/styles.js.hbs",
+        path: "../../src/components/{{properCase name}}/styles.js",
+        templateFile: "./components/styles.js.hbs",
         abortOnFail: true,
       });
     }
 
     actions.push({
       type: "prettify",
-      path: "/features/",
+      path: "/components/",
     });
 
     return actions;

@@ -9,7 +9,7 @@ import { firebaseInit } from "./config/firebase";
 
 import { selectMain } from "./app/slice";
 
-import Header from "./features/Header";
+import Header from "./components/Header";
 import Home from "./pages/Home";
 import AboutMe from "./pages/AboutMe";
 import Auth from "./pages/Auth";

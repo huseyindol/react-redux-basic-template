@@ -7,7 +7,7 @@
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
-const featuresGenerator = require("./features/index.js");
+const featuresGenerator = require("./components/index.js");
 const pagesGenerator = require("./pages/index.js");
 
 /**
@@ -22,7 +22,7 @@ module.exports = (plop) => {
   plop.addHelper("directory", (comp) => {
     try {
       fs.accessSync(
-        path.join(__dirname, `../../src/features/${comp}`),
+        path.join(__dirname, `../../src/components/${comp}`),
         fs.F_OK
       );
       return `features/${comp}`;
